@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { GiShoppingCart } from 'react-icons/gi'
+import './navbar.css'
 
 
 export const Navbar = () => {
