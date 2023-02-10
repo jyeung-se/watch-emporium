@@ -36,3 +36,19 @@
     cursor: pointer;
 }
 
+.addToCartButton {
+    border: 2px solid rgb(41, 41, 41);
+    background-color: transparent;
+    min-width: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 15px;
+}
+
+.addToCartButton:hover {
+    color: white;
+    background-color: rgb(41, 41, 41);
+    cursor: pointer;
+}
