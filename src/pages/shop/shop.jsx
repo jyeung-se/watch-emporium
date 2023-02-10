@@ -8,7 +8,9 @@ const Shop = () => {
             Watch Emporium
         </div>
         <div className='products'>
-            
+            {PRODUCTS.map((product) => {
+                <Product />
+            })}
         </div>
     </div>
   )
