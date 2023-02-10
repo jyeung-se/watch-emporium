@@ -1,0 +1,25 @@
+.shopTitle {
+    margin-top: 100px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.products {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+}
+
+.product {
+    width: 300px;
+    height: 370px;
+    margin: 100px;
+    display: flex;
+    border-radius: 15px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
