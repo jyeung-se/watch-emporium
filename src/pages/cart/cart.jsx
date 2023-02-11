@@ -5,7 +5,8 @@ import { CartItem } from './cartItem'
 import './cart.css'
 
 const Cart = () => {
-const { cartItems } = useContext(ShopContext)
+  const { cartItems, calcTotalCartPrice } = useContext(ShopContext)
+  const totalPrice = calcTotalCartPrice()
 
     return (
       <div className='cart'>
@@ -18,6 +19,12 @@ const { cartItems } = useContext(ShopContext)
               return <CartItem data={product} />
             }
           })}
+        </div>
+
+        <div className='checkout'>
+          <p>Subtotal: ${totalPrice}</p>
+          <button>Continue Shopping</button>
+          <button>Checkout</button>
         </div>
       </div>
     )

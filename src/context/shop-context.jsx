@@ -28,7 +28,19 @@ export const ShopContextProvider = (props) => {
         setCartItems((prev) => ({...prev, [itemId]: newQuantity}))
     }
 
-    const contextValue = { cartItems, addToCart, removeFromCart, updateCartItemQuantity }
+    const calcTotalCartPrice = () => {
+        let totalPrice = 0
+
+        for (const item in cartItems) {
+            if (cartItems[item] > 0) {
+                let itemInfo = PRODUCTS.find((product) => product.id === Number(item))
+                totalPrice += cartItems[item] * itemInfo.price
+            }
+        }
+        return totalPrice
+    }
+
+    const contextValue = { cartItems, addToCart, removeFromCart, updateCartItemQuantity, calcTotalCartPrice }
 
     console.log(cartItems)
     return (
