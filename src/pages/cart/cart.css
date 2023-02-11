@@ -25,3 +25,19 @@
     font-size: 20px;
 }
 
+.itemCounter input {
+    width: 42px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.checkout {
+    width: 150px;
+    height: 50px;
+    color: white;
+    background-color: rgba(41, 41, 41);
+    border: none;
+    border-radius: 6px;
+    margin: 10px;
+    cursor: pointer;
+}
