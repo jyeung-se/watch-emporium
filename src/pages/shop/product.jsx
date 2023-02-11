@@ -3,7 +3,9 @@ import { ShopContext } from '../../context/shop-context'
 
 export const Product = (props) => {
     const { id, productName, brand, price, dial, caseSize, movement, productImage } = props.data
-    const { addToCart } = useContext(ShopContext)
+    const { addToCart, cartItems } = useContext(ShopContext)
+
+    const cartItemAmount = cartItems[id]
 
     return (
         <div className='product'>
@@ -15,7 +17,8 @@ export const Product = (props) => {
                 <p>${price}</p>
             </div>
             <button className='addToCartButton' onClick={() => addToCart(id)}>
-                Add To Cart
+                {/* Rather than use <React.Fragment> and </React.Fragment> there is a short syntax available: <> and the corresponding closing tag </> */}
+                Add To Cart {cartItemAmount > 0 && <> ({cartItemAmount})</> }
             </button>
         </div>
     )
