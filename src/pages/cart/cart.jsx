@@ -5,7 +5,7 @@ import { CartItem } from './cartItem'
 import './cart.css'
 
 const Cart = () => {
-  const cartItems = useContext(ShopContext)
+const { cartItems } = useContext(ShopContext)
 
     return (
       <div className='cart'>
