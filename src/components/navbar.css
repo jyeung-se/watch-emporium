@@ -7,6 +7,17 @@
     align-items: center;
 }
 
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    margin: 15px;
+}
+
+.navbar-logo img {
+    width: 150px;
+}
+
 .links {
     margin-right: 50px;
     display: flex;
